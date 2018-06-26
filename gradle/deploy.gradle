@@ -25,10 +25,9 @@ deployHeroku {
     dependsOn assemble
 
     doFirst {
-        echo 'HEROKU_API_KEY='
-        echo System.getenv('HEROKU_API_KEY')
         if (!System.getenv('HEROKU_API_KEY')) {
             throw new GradleException('Deployment to Heroku requires setting the environment variable HEROKU_API_KEY')
         }
+        println System.getenv('HEROKU_API_KEY')
     }
 }

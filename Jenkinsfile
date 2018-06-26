@@ -54,11 +54,6 @@ pipeline {
             }
         }
     }
-    post {
-        failure {
-            mail to: 'htao@thoughtworks.com', subject: 'Build failed', body: 'Please fix!'
-        }
-    }
 }
 
 def gradlew(String... args) {
