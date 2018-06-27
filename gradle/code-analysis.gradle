@@ -16,6 +16,6 @@ sonarqube {
         property 'sonar.host.url', 'https://sonarcloud.io'
         property 'sonar.organization', 'xiaotaozi1127'
         property 'sonar.login', System.getenv('SONAR_LOGIN')
-        properties['sonar.tests'] += sourceSets.integrationTest.java.srcDirs
+        // properties['sonar.tests'] += sourceSets.integrationTest.java.srcDirs
     }
 }
