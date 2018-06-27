@@ -7,6 +7,14 @@ pipeline {
                 gradlew('clean', 'classes')
             }
         }
+         stage('Code Analysis') {
+            environment {
+                SONAR_LOGIN = credentials('SONARCLOUD_TOKEN')
+            }
+            steps {
+                gradlew('sonarqube')
+            }
+         }
         stage('Unit Tests') {
             steps {
                 gradlew('test')
