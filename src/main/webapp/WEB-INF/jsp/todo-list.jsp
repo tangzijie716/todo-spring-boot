@@ -18,7 +18,7 @@
     </header>
     <section id="main">
         <input id="toggle-all" type="checkbox">
-        <label for="toggle-all">Mark all as complete</label>
+        <label for="toggle-all">Mark all as completed</label>
         <ul id="todo-list">
             <c:forEach var="toDoItem" items="${toDoItems}" varStatus="status">
                 <li id="toDoItem_${status.count}" class="<c:if test="${toDoItem.completed}">completed</c:if>" ondblclick="javascript:document.getElementById('toDoItem_${status.count}').className += ' editing';document.getElementById('toDoItemName_${status.count}').focus();">
