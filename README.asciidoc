@@ -11,7 +11,7 @@ This project is a simple, MVC-based task management web application written in J
 ** Integration testing Spring test utilities.
 * Static code analysis with publishing of result to SonarCloud.
 * Deployment of the WAR file to Heroku.
-xxx
+xxxxxxx
 
 == Build pipeline
 
